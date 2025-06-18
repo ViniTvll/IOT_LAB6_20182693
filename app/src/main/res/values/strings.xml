@@ -2,4 +2,6 @@
     <string name="app_name">IOT_LAB6_20182693</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_id">AIzaSyAlr4hSDYm2Sv4x106SQb8EFvOq3zoIwjg</string>
+
 </resources>

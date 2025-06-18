@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.example.iot_lab6_20182693.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,17 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
-            switch (item.getItemId()) {
-                case R.id.nav_linea1:
-                    fragment = new Linea1Fragment();
-                    break;
-                case R.id.nav_limapass:
-                    fragment = new LimaPassFragment();
-                    break;
-                case R.id.nav_resumen:
-                    fragment = new ResumenFragment();
-                    break;
+            int id = item.getItemId();
+            if (id == R.id.nav_linea1) {
+                fragment = new Linea1Fragment();
+            } else if (id == R.id.nav_limapass) {
+                fragment = new LimaPassFragment();
+            } else if (id == R.id.nav_resumen) {
+                fragment = new ResumenFragment();
             }
+
             if (fragment != null) {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.nav_host_fragment, fragment).commit();
